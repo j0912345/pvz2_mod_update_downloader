@@ -30,7 +30,7 @@ if __name__ == '__main__':
     else:
         # url for constain builds
         url = "https://drive.google.com/uc?id=10yQvqpbLoXBX9kpHzbK4fGAEWg_uE1ww"
-    output = "temp.obb"
+    output = "com.ea.game.pvz2_wha.obb"
     gdown.download(url, output, quiet=False)
     
     print("moving file to emulator...")
