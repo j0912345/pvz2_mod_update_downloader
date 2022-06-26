@@ -1,0 +1,5 @@
+{
+	"nox_install_location": "I:/nox/Nox/bin/",
+	"#comment": "make sure that this is the exact name that it has in Multi-Drive.",
+	"emulator_name": "modding"
+}
