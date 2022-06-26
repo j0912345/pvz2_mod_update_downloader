@@ -4,6 +4,8 @@ if __name__ == '__main__':
     import push_to_nox as ptn
     import os
     import json
+    # the number in the filename
+    obb_filename_version = 621
     cwd = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -30,7 +32,7 @@ if __name__ == '__main__':
     else:
         # url for constain builds
         url = "https://drive.google.com/uc?id=10yQvqpbLoXBX9kpHzbK4fGAEWg_uE1ww"
-    output = "main.com.ea.game.pvz2_wha.obb"
+    output = f"main.{obb_filename_version}.com.ea.game.pvz2_wha.obb"
     gdown.download(url, output, quiet=False)
     
     print("moving file to emulator...")
