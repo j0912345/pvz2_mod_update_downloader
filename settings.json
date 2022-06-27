@@ -1,5 +1,22 @@
 {
+	"#comment_0": "this is the directory containing 'NoxConsole.exe'. should be in nox's install directory.",
 	"nox_install_location": "I:/nox/Nox/bin/",
-	"#comment": "make sure that this is the exact name that it has in Multi-Drive.",
-	"emulator_name": "modding"
+	
+	"#comment_1": "make sure that this is the exact name that it has in Multi-Drive.",
+	"emulator_name": "modding",
+	
+	"#comment_2": "the XXX in the url you get when sharing with 'anyone with the link' in google drive:",
+	"#comment_3": "https://drive.google.com/file/d/XXX/view?usp=sharing",
+	"main_download_id": "",
+	
+	"#comment_4": "the same as 'main_download_id', but this one is used if the user answers 'y' to 'do you want to download the alt version? (y/n)'",
+	"alt_obb_download_id": "",
+	
+	
+	"#comment_5": "the XYZ in your mod's 'main.<obb_filename_version>.com.ea.game.pvz2_XYZ.obb' file.",
+	"custom_obb_letters":"",
+	
+	"#comment_6": "the XYZ in your mod's 'main.XYZ.com.ea.game.pvz2_<custom_obb_letters>.obb' file.",
+	"obb_file_name_version": ""
+	
 }

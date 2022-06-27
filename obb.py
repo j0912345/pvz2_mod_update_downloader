@@ -5,14 +5,13 @@ if __name__ == '__main__':
     import os
     import json
     # the number in the filename
-    obb_filename_version = 621
     cwd = os.path.dirname(os.path.realpath(__file__))
 
 
     with open("settings.json", "r") as sf:
         json_data = json.loads(sf.read())
     
-    download_beta = input("do you want to download the beta? (y/n)")
+    download_beta = input("do you want to download the alt version? (y/n)")
 
     if download_beta[0] == "y":
         download_beta = True
@@ -23,18 +22,17 @@ if __name__ == '__main__':
         input("press enter to exit")
         exit()
 
-    # from: https://github.com/wkentaro/gdown
+
     import gdown
 
-
     if download_beta:
-        url = "https://drive.google.com/uc?id=1RPXwKU-UR7Nkm-8XUUyhgkSStodB-dz5"
+        url = f"https://drive.google.com/uc?id={json_data['alt_obb_download_id']}"
     else:
-        # url for constain builds
-        url = "https://drive.google.com/uc?id=10yQvqpbLoXBX9kpHzbK4fGAEWg_uE1ww"
-    output = f"main.{obb_filename_version}.com.ea.game.pvz2_wha.obb"
+        url = f"https://drive.google.com/uc?id={json_data['main_download_id']}"
+        
+    output = f"main.{json_data['obb_file_name_version']}.com.ea.game.pvz2_{json_data['custom_obb_letters']}.obb"
     gdown.download(url, output, quiet=False)
     
     print("moving file to emulator...")
 #    print( os.path.join(cwd, output))
-    ptn.push( os.path.join(cwd, output), "/storage/self/primary/Android/obb/com.ea.game.pvz2_wha/", json_data["nox_install_location"], json_data["emulator_name"])
+    ptn.push( os.path.join(cwd, output), f"/storage/self/primary/Android/obb/com.ea.game.pvz2_{json_data['custom_obb_letters']}/", json_data["nox_install_location"], json_data["emulator_name"])
